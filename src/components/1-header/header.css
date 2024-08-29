@@ -1,153 +1,163 @@
-/*
-====================================================
-Table of content
-====================================================
-1. Header styling
-2. Navigation styling
-3. List styling
-4. link styling
-6. button styling
-7. icon button styling
-8. modal pop up styling
-9. Responsive Design for Screens Less than 700px 
-*/
+/* ===========================
+ table of contents
+==============================
+1. Header Design
+2. Button & icon
+3- Modal == pop up
+4- Responsive Design (media query)*/
 
-/*1. Header styling*/
-header.flex{
+/* ========================
+    1. Header Design
+=========================== */
+header.flex {
     justify-content: space-between;
-    padding: 0 2.5rem;
-}
-
-/*2. Navigation styling*/
-header.flex nav{
-    background-color: var(--bgHeader);
-    padding: 0.7rem 2rem;
+    padding: 0 2.4rem;
     margin-top: 1.2rem;
+  }
+  
+  header.flex nav {
+    background-color: var(--bgHeader);
+    padding: 0.77rem 1.6rem;
     border-radius: 55px;
-    box-shadow: 1px 1px 20px rgba(82, 76, 76, 0.324);
-}
-
-/* 3. List styling */
-header ul.flex {
+    box-shadow: 1px 1px 40px #2323242a;
+  }
+  
+  header ul.flex {
     gap: 16px;
-}
-
-/*4. link styling*/
-header ul li a {
+  }
+  
+  header ul li a {
     color: var(--title);
     opacity: 0.9;
     font-size: 0.88rem;
-    font-weight: 600;
-}
-
-header ul li a:hover {
+    font-weight: 500;
+  }
+  
+  header ul li a:hover {
     color: var(--blue);
     opacity: 1;
     font-size: 0.9rem;
-
-}
-
-/* 6. button styling */
-header button{
+  }
+  
+  header button {
     font-size: 1.2rem;
-}
-
-header button.menu{
+  }
+  
+  header button.menu {
     display: none;
-}
-
-/* 7.icon button styling*/
-header .icon-menu, header button.mode{
-    display: flex;
+  }
+  
+  /* ========================
+      2. Button & icon
+  =========================== */
+  header .icon-menu,
+  header button.mode {
     background-color: var(--bgHeader);
     height: 2.4rem;
     width: 2.4rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     border-radius: 50%;
+  
+    justify-content: center;
+    text-align: center;
+  
     color: var(--subtitle);
-    border: 1px solid rgba(250, 128, 114, 0.368);
-
-}
-
-header .icon-menu:hover, header button.mode:hover{
+    border: 1px solid rgba(244, 165, 96, 0.249);
+    transition: 0.2s;
+    box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+  }
+  
+  header .icon-sun {
+    color: rgb(255, 165, 0);
+  }
+  
+  header .icon-menu:hover,
+  header button.mode:hover {
     color: var(--title);
-    border: 1px solid rgba(250, 128, 114, 0.822);
-    transition: .5s;
-}
-
-header .icon-close{
-   font-size: 1.5rem; 
-   color: var(--subtitle);
-   transition: 0.3s;
-
-}
-
-header .icon-close:hover{
-    font-size: 1.7rem; 
+    border: 1px solid rgb(244, 165, 96);
+  }
+  
+  header .icon-close {
+    font-size: 1.5rem;
+    color: var(--subtitle);
+    transition: 0.3s;
+  }
+  
+  header .icon-close:hover {
+    font-size: 1.7rem;
     color: crimson;
     rotate: 180deg;
- 
- }
-
-/* 8. modal pop up styling */
-header .fixed {
+  }
+  
+  /* ========================
+      3- Modal == pop up
+  =========================== */
+  header .fixed {
     position: fixed;
     inset: 0;
-    z-index: 10;
-    background-color: rgba(40, 40, 48, 0.9);
-}
-
-@keyframes ChangeScaling {
-    0% {scale: 0;}
-    70% {scale: 1.2;}
-    100% {scale: 1;}
-    
-}
-
-header .fixed ul.modal{
-    width: 85%;
-    margin-left: auto;
-    margin-right:auto ;
+    z-index: 11;
+    background-color: rgba(40, 40, 48, 0.91);
+  
+    /* filter: blur(8px); */
+    backdrop-filter: blur(4px);
+  }
+  
+  @keyframes mymove {
+    0% {
+      scale: 0;
+    }
+  
+    60% {
+      scale: 1.2;
+    }
+  
+    100% {
+      scale: 1;
+    }
+  }
+  
+  header .fixed ul.modal {
+    animation: mymove 0.77s 1;
+    width: 75%;
+  margin-inline: auto;
+  
+  
     margin-top: 2rem;
     border-radius: 1rem;
     padding: 1rem 2rem;
     background-color: var(--secondary);
-    animation: ChangeScaling 0.7s 1;
-}
-
-header .fixed ul.modal li{
+  }
+  
+  header .fixed ul.modal li {
     border-bottom: 1px solid var(--border);
-    padding-bottom: .77rem;
-    padding-top: .5rem;
-}
-
-header .fixed ul.modal li:last-child{
-    border: none;
-}
-
-header .fixed ul.modal li a{
-    font-size: 1rem;
-}
-
-header .fixed ul.modal li:first-child{
+    padding-bottom: 0.77rem;
+    padding-top: 0.5rem;
+  }
+  
+  header .fixed ul.modal li:first-child {
     text-align: right;
     border: none;
     padding-bottom: 0;
-    padding-top: .2rem;
+    padding-top: 0.2rem;
     margin-bottom: -1rem;
-}
-
-/* 9. Responsive Design for Screens Less than 700px */
-@media (max-width : 700px){
-    header.flex nav{
-        display: none;
+  }
+  
+  header .fixed ul.modal li:last-child {
+    border: none;
+  }
+  
+  header .fixed ul.modal li a {
+    font-size: 1rem;
+  }
+  
+  /* =====================================
+    4- Responsive Design (media query)
+  ======================================== */
+  @media (width < 700px) {
+    header.flex nav {
+      display: none;
     }
-    header.flex{
-        padding-top: 1.4rem;
+  
+    header button.menu {
+      display: block;
     }
-    header button.menu{
-        display: block;
-    }
-}
+  }
