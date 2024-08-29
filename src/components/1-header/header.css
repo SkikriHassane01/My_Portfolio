@@ -1,8 +1,24 @@
+/*
+====================================================
+Table of content
+====================================================
+1. Header styling
+2. Navigation styling
+3. List styling
+4. link styling
+6. button styling
+7.icon button styling
+8. modal pop up styling
+9. Responsive Design for Screens Less than 700px 
+*/
+
+/*1. Header styling*/
 header.flex{
     justify-content: space-between;
     padding: 0 2.5rem;
 }
 
+/*2. Navigation styling*/
 header.flex nav{
     background-color: var(--bgHeader);
     padding: 0.7rem 2rem;
@@ -10,10 +26,13 @@ header.flex nav{
     border-radius: 55px;
     box-shadow: 1px 1px 20px rgba(82, 76, 76, 0.324);
 }
+
+/* 3. List styling */
 header ul.flex {
     gap: 16px;
 }
 
+/*4. link styling*/
 header ul li a {
     color: var(--title);
     opacity: 0.9;
@@ -27,6 +46,8 @@ header ul li a:hover {
     font-size: 0.9rem;
 
 }
+
+/* 6. button styling */
 header button{
     font-size: 1.2rem;
 }
@@ -35,8 +56,7 @@ header button.menu{
     display: none;
 }
 
-/* icon button*/
-
+/* 7.icon button styling*/
 header .icon-menu, header button.mode{
     display: flex;
     background-color: var(--bgHeader);
@@ -50,12 +70,28 @@ header .icon-menu, header button.mode{
     border: 1px solid rgba(250, 128, 114, 0.368);
 
 }
+
 header .icon-menu:hover, header button.mode:hover{
     color: var(--title);
     border: 1px solid rgba(250, 128, 114, 0.822);
-    transition: .4s;
+    transition: .5s;
 }
-/* modal pop up */
+
+header .icon-clear{
+   font-size: 1.5rem; 
+   color: var(--subtitle);
+   transition: 0.3s;
+
+}
+
+header .icon-clear:hover{
+    font-size: 1.7rem; 
+    color: crimson;
+    rotate: 180deg;
+ 
+ }
+
+/* 8. modal pop up styling */
 header .fixed {
     position: fixed;
     inset: 0;
@@ -91,17 +127,18 @@ header .fixed ul.modal li:last-child{
     border: none;
 }
 
-
 header .fixed ul.modal li a{
     font-size: 1rem;
 }
+
 header .fixed ul.modal li:first-child{
     text-align: right;
     border: none;
     padding-bottom: 0;
     padding-top: .2rem;
 }
-/* if the screen is less than 700px  we will remove the nav bar*/
+
+/* 9. Responsive Design for Screens Less than 700px */
 @media (max-width : 700px){
     header.flex nav{
         display: none;
