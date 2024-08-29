@@ -1,0 +1,75 @@
+/* ================================
+Table of content
+________________
+
+1. left section 
+2. right section
+
+==================================*/
+
+
+
+
+/* ================================
+1. left section
+==================================*/
+
+section.hero {
+    margin-top: 3rem;
+}
+
+section.hero .parent-avatar.flex{
+    align-items: end;
+    gap: .6rem;
+}
+section.hero .left-section{
+    flex-grow: 1;
+}
+
+
+section.hero .avatar{
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid darkorange;
+    padding: 2px;
+    box-shadow: 2px 2px 40px rgba(200,200,200, 0.5) inset;
+}
+
+
+section.hero .icon-verified{
+    color: var(--blue);
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+}
+
+
+section.hero h1.title{
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    margin: 24px 0;
+    color: var(--title);
+}
+section.hero .subtitle{
+    font-size: .9rem;
+    line-height: 1.6rem;
+    color: var(--subtitle);
+    margin-bottom: 30px;
+}
+
+section.hero .all-icons{
+    font-size: 1.3rem;
+    gap: 1.5rem;
+    color: var(--subtitle);
+}
+
+section.hero .all-icons .icon:hover{
+    font-size: 1.4rem;
+    transition: .3s;
+    cursor: pointer;
+    color: var(--icon-hover);
+}
+
+/* ================================
+1. Right section => animation
+==================================*/
+
