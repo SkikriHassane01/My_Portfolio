@@ -7,7 +7,7 @@ Table of content
 3. List styling
 4. link styling
 6. button styling
-7.icon button styling
+7. icon button styling
 8. modal pop up styling
 9. Responsive Design for Screens Less than 700px 
 */
@@ -77,14 +77,14 @@ header .icon-menu:hover, header button.mode:hover{
     transition: .5s;
 }
 
-header .icon-clear{
+header .icon-close{
    font-size: 1.5rem; 
    color: var(--subtitle);
    transition: 0.3s;
 
 }
 
-header .icon-clear:hover{
+header .icon-close:hover{
     font-size: 1.7rem; 
     color: crimson;
     rotate: 180deg;
@@ -136,6 +136,7 @@ header .fixed ul.modal li:first-child{
     border: none;
     padding-bottom: 0;
     padding-top: .2rem;
+    margin-bottom: -1rem;
 }
 
 /* 9. Responsive Design for Screens Less than 700px */
