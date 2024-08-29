@@ -26,7 +26,7 @@ export default function header() {
         ShowModal && (
           <div className="fixed">
               <ul className="modal">
-                <li><button className="icon-clear" onClick={() => {setShowModal(false)}}></button></li>
+                <li><button className="icon-close" onClick={() => {setShowModal(false)}}></button></li>
                 <li><a href="">About</a></li>               
                 <li><a href="">Articles</a></li>
                 <li><a href="">Projects</a></li>
