@@ -1,0 +1,84 @@
+/* import the roboto font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/*global styling for better organizing________________________*/
+html{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--primary);
+    color: #fff;
+}
+/* global variable for black mode_________________________________________*/
+:root{
+    --primary:#000;
+    --secondary: hsl(240,4%,9.8%);
+    --border: rgba(63, 63, 70,0.4);
+
+    --title: rgb(244 244 245);
+    --subtitle: rgb(161, 161, 170);
+
+    --bgHeader: rgb(39,39,42);
+
+    --blue: rgb(93,188,252);
+}
+
+/*global variable for light mode________________________________________________*/
+.light{
+    --primary: #fff;
+}
+
+/*the main container_____________________________________________________________*/
+.container{
+    display: block;
+    border: 1px solid var(--border);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary);
+}
+
+/* the break line between each components_________________________________________*/
+.divider{
+    border-bottom: 1px solid var(--border);
+    margin: 3rem; 
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: initial;
+    transition: 0.2s;
+}
+
+a:hover{
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+button{
+    all: unset;
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    scale: 0.9;
+}
