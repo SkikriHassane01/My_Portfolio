@@ -3,7 +3,7 @@ import './hero.css'
 export default function Hero() {
   return (
     <section className='hero flex'>
-      <div className="left-section border">
+      <div className="left-section">
 
         <div className="parent-avatar flex">
           <img src="./public/TitleImage.png" alt="" className='avatar'/>
@@ -21,7 +21,7 @@ export default function Hero() {
           <div className="icon icon-linkedin-square"></div>
         </div>
       </div>
-      <div className="right-section animation border">
+      <div className="right-section animation">
         animation
       </div>
     </section>

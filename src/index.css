@@ -90,6 +90,24 @@ button:active{
     scale: 0.9;
 }
 
+
+.scroll2Top{
+    background-color: rgba(25,118,210,.85);
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 3%;
+    text-align: center;
+}
+
+.scroll2Top:hover{
+    background-color: rgba(25,118,210,1);
+    border: 1px solid rgba(255, 255, 255, 0.293);
+
+}
+
 @media (max-width: 1000px) {
     .container{
         --container-padding: 1.7rem;
@@ -111,5 +129,10 @@ button:active{
     .container{
         width: 98%;
         padding: 0 var(--container-padding);
+    }
+    .scroll2Top{
+        width: 2.2rem;
+        height: 2.2rem;
+        opacity: .6;
     }
 }
