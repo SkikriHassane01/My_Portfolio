@@ -21,8 +21,10 @@ section.hero {
 section.hero .parent-avatar.flex{
     align-items: end;
     gap: .6rem;
+    min-height: 200px;
 }
 section.hero .left-section{
+    max-width: 600px;
     flex-grow: 1;
 }
 
@@ -73,3 +75,13 @@ section.hero .all-icons .icon:hover{
 1. Right section => animation
 ==================================*/
 
+section.hero .animation{
+    width: 100%;
+    translate: 130px 55px;
+}
+
+@media (max-width: 1250px) {
+    section.hero .animation{
+      display: none;
+    }
+  }

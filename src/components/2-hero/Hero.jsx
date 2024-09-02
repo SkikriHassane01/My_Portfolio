@@ -1,12 +1,20 @@
-import React from 'react'
 import './hero.css'
+import Lottie from "lottie-react";
+import MlAnimation from "../../animation/ML.json"
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 export default function Hero() {
+  const lottieRef = useRef();
   return (
     <section className='hero flex'>
       <div className="left-section">
 
         <div className="parent-avatar flex">
-          <img src="./public/TitleImage.png" alt="" className='avatar'/>
+          <motion.img
+            initial = {{transform:"scale(0)"}}
+            animate = {{ transform:"scale(1.1)"}}
+            transition={{damping:6, type:"spring", stiffness:"100"}}
+           src="./public/TitleImage.png" alt="" className='avatar'/>
           <div className='icon-verified flex'></div>
         </div>
 
@@ -22,7 +30,10 @@ export default function Hero() {
         </div>
       </div>
       <div className="right-section animation">
-        animation
+        <Lottie lottieRef={lottieRef} onLoadedImages={() => {
+          // @ts-ignore
+          lottieRef.current.setSpeed(1.5);
+        }} animationData={MlAnimation} />
       </div>
     </section>
   );
