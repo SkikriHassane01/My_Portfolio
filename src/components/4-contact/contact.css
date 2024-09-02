@@ -28,14 +28,25 @@ section.contact-us #email, section.contact-us #message{
     transition: .4s;
     font-size: 1.1rem;
 }
-section.contact-us #email:focus, section.contact-us #message:focus{
+
+.light section.contact-us #email, .light section.contact-us #message{
+  color: var(--title);
+  background-color: rgba(255, 255, 255, 0.158);
+  border: 1px solid rgba(128,128,128,0.45);
+  box-shadow: 2px 2px 2px rgba(73,73,75,0.1);
+
+}
+section.contact-us #email:focus, section.contact-us #message:focus, section.contact-us #email:hover, section.contact-us #message:hover{
     border: 1px solid rgb(45,212,191);
 
 }
-section.contact-us #email:hover, section.contact-us #message:hover{
-    border: 1px solid rgb(45,212,191);
+
+.light section.contact-us #email:focus, .light section.contact-us #message:focus, .light section.contact-us #email:hover, .light section.contact-us #message:hover{
+  border: 1px solid rgb(78,80, 80);
 
 }
+
+
 
 section.contact-us #message{
     min-height: 9rem;
@@ -89,4 +100,10 @@ section.contact-us .submit {
         align-self: center;
       }
 
+}
+
+@media (max-width: 1250px) {
+  section.contact-us .contact-animation{
+    display: none;
+  }
 }
