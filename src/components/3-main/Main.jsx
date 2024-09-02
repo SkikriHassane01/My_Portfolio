@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import "./main.css";
-import {ListProjects} from './ProjectsData'
-export default function Main() {
- 
+import { ListProjects } from './ProjectsData';
+import { AnimatePresence, motion } from 'framer-motion';
 
+export default function Main() {
   const [currentActive, setCurrentActive] = useState("all");
 
   const filteredProjects = currentActive === "all" 
@@ -34,26 +34,37 @@ export default function Main() {
       </section>
 
       <section className="right-section flex">
-        {filteredProjects.map((item) => (
-          <article key={item.imgPath} className="card">
-            <img src={item.imgPath} width={266} alt={item.projectTitle} />
-            <div className="box" style={{ width: "266px" }}>
-              <h1 className="title">{item.projectTitle}</h1>
-              <p className="sub-title">
-                {item.subtitle}
-              </p>
-              <div className="icons flex">
-                <div className="flex" style={{ gap: "11px" }}>
-                  <div className="icon-link"></div>
-                  <div className="icon-github"></div>
+        <AnimatePresence>
+          {filteredProjects.map((item) => (
+            <motion.article
+              key={item.imgPath}
+              layout
+              initial={{ opacity: 0, y: 50, scale: 0 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 50, scale: 0.8 }}
+              transition={{
+                duration: 0.5,
+                ease: [0.6, -0.05, 0.01, 0.99],
+              }}
+              className="card"
+            >
+              <img src={item.imgPath} width={266} alt={item.projectTitle} />
+              <div className="box" style={{ width: "266px" }}>
+                <h1 className="title">{item.projectTitle}</h1>
+                <p className="sub-title">{item.subtitle}</p>
+                <div className="icons flex">
+                  <div className="flex" style={{ gap: "11px" }}>
+                    <div className="icon-link"></div>
+                    <div className="icon-github"></div>
+                  </div>
+                  <a className="link flex" href="">
+                    more <span className="icon-arrow-right" style={{ alignSelf: "end" }}></span>
+                  </a>
                 </div>
-                <a className="link flex" href="">
-                  more <span className="icon-arrow-right" style={{ alignSelf: "end" }}></span>
-                </a>
               </div>
-            </div>
-          </article>
-        ))}
+            </motion.article>
+          ))}
+        </AnimatePresence>
       </section>
     </main>
   );
