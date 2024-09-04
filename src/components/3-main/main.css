@@ -125,6 +125,51 @@ main section.right-section.flex {
   margin-right: 12px;
 }
 
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-btn {
+  padding: 10px 20px;
+  background-color: var(--bgHeader);
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 165, 96, 0.249);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-btn:disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: not-allowed;
+}
+
+.pagination-btn:hover:enabled {
+  background-color: var(--hoverBg);
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: var(--title);
+}
 
 
 /* =====================================
