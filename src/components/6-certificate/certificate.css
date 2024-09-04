@@ -85,3 +85,44 @@
   }
   
 
+/* Responsive adjustments for screens smaller than 768px */
+@media (max-width: 1500px) {
+  .certificate-slider {
+    flex-direction: column;
+  }
+
+  .certificate-card {
+    width: 100%;
+    height: auto;
+    filter: none;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .left-card,
+  .right-card {
+    display: none;
+  }
+
+  .main-card {
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+  }
+
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 -46px;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+}

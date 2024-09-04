@@ -21,7 +21,7 @@ export default function Footer() {
           </li>
         </ul>
 
-      <p>© 2024 Spencer Sharp. All rights reserved.</p>
+      <p>© 2024 Hassane Skikri. All rights reserved.</p>
     </footer>
   );
 }

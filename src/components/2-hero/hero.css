@@ -50,6 +50,7 @@ section.hero h1.title{
     line-height: 3.4rem;
     margin: 24px 0;
     color: var(--title);
+    text-align: start;
 }
 section.hero .subtitle{
     font-size: .9rem;
