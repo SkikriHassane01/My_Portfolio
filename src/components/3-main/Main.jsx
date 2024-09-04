@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 import "./main.css";
-import { ListProjects } from './ProjectsData';
-import { AnimatePresence, motion } from 'framer-motion';
+import { ListProjects } from "./ProjectsData";
+import { AnimatePresence, motion, spring } from "framer-motion";
 
 export default function Main() {
   const [currentActive, setCurrentActive] = useState("all");
 
-  const filteredProjects = currentActive === "all" 
-    ? ListProjects 
-    : ListProjects.filter((project) => project.category.includes(currentActive));
+  const filteredProjects =
+    currentActive === "all"
+      ? ListProjects
+      : ListProjects.filter((project) =>
+          project.category.includes(currentActive)
+        );
 
   const categories = [
     { key: "all", label: "All projects" },
@@ -16,7 +19,10 @@ export default function Main() {
     { key: "regression", label: "ML Regression" },
     { key: "deepLearning", label: "Deep Learning" },
     { key: "NLP", label: "NLP projects" },
-    { key: "Top", label: "Top Projects" }
+    { key: "Python", label: "Python projects" },
+    { key: "C/C++/java", label: "C/C++/Java" },
+    { key: "WebDevelopment", label: "Web Development" },
+    { key: "Top", label: "Top Projects" },
   ];
 
   return (
@@ -37,18 +43,23 @@ export default function Main() {
         <AnimatePresence>
           {filteredProjects.map((item) => (
             <motion.article
-              key={item.imgPath}
+              key={`${item.imgPath}-${item.projectTitle}`}
               layout
-              initial={{ opacity: 0, y: 50, scale: 0 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 50, scale: 0.8 }}
+              initial={{ transform: "scale(0.4)" }}
+              animate={{ transform: "scale(1)" }}
               transition={{
-                duration: 0.5,
-                ease: [0.6, -0.05, 0.01, 0.99],
+                type: "spring",
+                damping: 8,
+                stiffness: 50,
               }}
               className="card"
             >
-              <img src={item.imgPath} width={266} alt={item.projectTitle} />
+              <img
+                src={item.imgPath}
+                width={266}
+                height={180}
+                alt={item.projectTitle}
+              />
               <div className="box" style={{ width: "266px" }}>
                 <h1 className="title">{item.projectTitle}</h1>
                 <p className="sub-title">{item.subtitle}</p>
@@ -57,8 +68,12 @@ export default function Main() {
                     <div className="icon-link"></div>
                     <div className="icon-github"></div>
                   </div>
-                  <a className="link flex" href="">
-                    more <span className="icon-arrow-right" style={{ alignSelf: "end" }}></span>
+                  <a className="link flex" href={item.link}>
+                    more{" "}
+                    <span
+                      className="icon-arrow-right"
+                      style={{ alignSelf: "end" }}
+                    ></span>
                   </a>
                 </div>
               </div>

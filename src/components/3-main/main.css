@@ -67,6 +67,7 @@ main section.right-section.flex {
     rgba(255, 255, 255, 0.05),
     rgba(255, 255, 255, 0.05)
   );
+  min-height: 380px;
 }
 
 .card:hover {
