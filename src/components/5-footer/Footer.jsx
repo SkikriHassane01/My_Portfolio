@@ -3,20 +3,23 @@ import './footer.css'
 export default function Footer() {
   return (
 <footer className="flex">
-      <ul className="flex">
-        <li>
-          <a href="">About</a>
-        </li>
-        <li>
-          <a href="">Projects</a>
-        </li>
-        <li>
-          <a href="">Speaking</a>
-        </li>
-        <li>
-          <a href="">Uses</a>
-        </li>
-      </ul>
+        <ul className="flex">
+          <li>
+            <a href="">Welcome</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#Project">Projects</a>
+          </li>
+          <li>
+            <a href="#certificates">Certificate</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
 
       <p>© 2024 Spencer Sharp. All rights reserved.</p>
     </footer>
