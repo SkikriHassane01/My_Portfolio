@@ -23,10 +23,11 @@ export default function Hero() {
         <p className='subtitle'>I'm Hassane Skikri, a computer Science student with a deep passion for data science and machine learning. I excel at transforming complex data into actionable insights, driving impactful solutions and continuous improvement.</p>
 
         <div className="all-icons flex">
+          
           <div className="icon icon-twitter"></div>
           <div className="icon icon-instagram"></div>
-          <div className="icon icon-github"></div>
-          <div className="icon icon-linkedin-square"></div>
+          <a href="https://github.com/HassaneSkikri/HassaneSkikri"><div className="icon icon-github"></div></a>
+          <a href="https://www.linkedin.com/in/hassane-skikri-8b25b9308/"><div className="icon icon-linkedin-square"></div></a>
         </div>
       </div>
       <div className="right-section animation">
