@@ -32,8 +32,8 @@ export default function Main() {
     { key: "Python", label: "Python projects" },
     { key: "C/C++/java", label: "C/C++/Java" },
     { key: "WebDevelopment", label: "Web Development" },
-    { key: "Top", label: "Top Projects" },
-    { key: "computervision", label: "Computer Vision" }
+    { key: "computervision", label: "Computer Vision" },
+    { key: "Top", label: "Top Projects" }
   ];
 
   const handleNextPage = () => {
