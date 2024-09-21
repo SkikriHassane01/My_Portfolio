@@ -81,7 +81,7 @@ export const ListProjects = [
   },
   {
     projectTitle: "To-Do Application",
-    category: ["Python"],
+    category: ["Python","WebDevelopment"],
     imgPath: "./images/todo.jpg",
     subtitle:
       "The application allows users to manage their tasks efficiently and effectively. The instance folder is reserved for the production configuration and test data.",
@@ -174,5 +174,68 @@ export const ListProjects = [
     subtitle:
     " This collection represents my journey through various data science and machine learning competitions, primarily focusing on challenges from platforms like Kaggle",
     link: "https://github.com/SkikriHassane01/Kaggle-Cometitions",
+  },
+  {
+    projectTitle: "Learn PyTorch for deep learning",
+    category: ["Python", "deepLearning"],
+    imgPath: "https://pytorch.org/assets/images/pytorch-logo.png",
+    subtitle: "A comprehensive roadmap to learn and implement deep learning concepts using PyTorch framework.",
+    link: "https://github.com/SkikriHassane01/Learn-PyTorch-for-deep-learning",
+  },
+  {
+    projectTitle: "Automatic number plate recognition with Yolov8 and EasyOCR",
+    category: ["Python", "computervision"],
+    imgPath: "https://miro.medium.com/max/1200/1*K4XR1wjDIQ17IuAbXzKuXQ.jpg",
+    subtitle: "This project combines YOLOv8 for object detection and EasyOCR for text recognition to automatically detect and read vehicle number plates.",
+    link: "https://github.com/SkikriHassane01/Automatic-number-plate-recognition-with-Yolov8-and-EasyOCR",
+  },
+  {
+    projectTitle: "Face Recognition with Real-Time Database",
+    category: ["Python", "computervision"],
+    imgPath: "https://www.realpython.com/cdn-cgi/image/width=640,format=auto/https://files.realpython.com/media/Face-Recognition-with-Python-in-Real-World-Scenarios_Watermarked.c863180fb39f.jpg",
+    subtitle: "A face recognition system that uses deep learning techniques and integrates with a real-time database for dynamic updates and recognition.",
+    link: "https://github.com/SkikriHassane01/Face-Recognition-with-Real-Time-Database",
+  },
+  {
+    projectTitle: "Poker hand detector",
+    category: ["Python", "computervision"],
+    imgPath: "https://miro.medium.com/max/1400/1*ZxrLRsy26tWkXP5Y5GgGSg.png",
+    subtitle: "This project uses computer vision and machine learning techniques to detect and classify poker hands from images.",
+    link: "https://github.com/SkikriHassane01/Pocker-hand-detector",
+  },
+  {
+    projectTitle: "Hand tracking project",
+    category: ["Python", "computervision"],
+    imgPath: "https://google.github.io/mediapipe/images/mobile/hand_tracking_3d_android_gpu.gif",
+    subtitle: "A computer vision project that tracks hand movements and gestures in real-time using deep learning models.",
+    link: "https://github.com/SkikriHassane01/hand-tracking-project",
+  },
+  {
+    projectTitle: "Virtual Calculator project",
+    category: ["Python", "computervision"],
+    imgPath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7fY4fzg48MuCQv-jeUUXKQfwtXqaO0x6v2Q&usqp=CAU",
+    subtitle: "This project creates a virtual calculator using computer vision techniques, allowing users to perform calculations through hand gestures.",
+    link: "https://github.com/SkikriHassane01/Virtual-Calculator-project-",
+  },
+  {
+    projectTitle: "Car Counter project with YOLOv8",
+    category: ["Python", "computervision"],
+    imgPath: "https://blogs.swarthmore.edu/its/wp-content/uploads/2023/11/counting_cars_2.png",
+    subtitle: "A project that uses YOLOv8, a state-of-the-art object detection model, to count cars in video streams or images.",
+    link: "https://github.com/SkikriHassane01/Car-Counter-project-with-yolov8",
+  },
+  {
+    projectTitle: "Object Detection using YOLO",
+    category: ["Python", "computervision"],
+    imgPath: "https://thepythoncode.com/media/articles/object-detection-yolo-opencv-python/yolo-opencv-result.png",
+    subtitle: "This project implements object detection using the YOLO (You Only Look Once) algorithm, demonstrating real-time object detection capabilities.",
+    link: "https://github.com/SkikriHassane01/Object-Detection-using-Yolo",
+  },
+  {
+    projectTitle: "Handwritten digit image classification with AWS deployment",
+    category: ["Python", "computervision", "classification"],
+    imgPath: "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/505665/d821f406-6a97-2bd2-a5a9-a9d5ef48ac6b.png",
+    subtitle: "A machine learning project that classifies handwritten digits and is deployed on AWS, showcasing both ML model development and cloud deployment skills.",
+    link: "https://github.com/SkikriHassane01/Handwritten-digit-image-classification-with-aws-deployment",
   }
 ];

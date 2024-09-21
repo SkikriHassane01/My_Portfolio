@@ -33,6 +33,7 @@ export default function Main() {
     { key: "C/C++/java", label: "C/C++/Java" },
     { key: "WebDevelopment", label: "Web Development" },
     { key: "Top", label: "Top Projects" },
+    { key: "computervision", label: "Computer Vision" }
   ];
 
   const handleNextPage = () => {
