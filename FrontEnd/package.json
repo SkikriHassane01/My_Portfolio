@@ -1,7 +1,8 @@
 {
   "name": "portfolio-react-project",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "proxy": "http://localhost:5000",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +14,7 @@
     "@formspree/react": "^2.5.1",
     "framer-motion": "^11.3.31",
     "lottie-react": "^2.4.0",
+    "marked": "^14.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
