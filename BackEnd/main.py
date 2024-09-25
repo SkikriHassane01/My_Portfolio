@@ -8,7 +8,9 @@ from dataset import load_data
 from utils import encode_labels
 import random
 from flask_cors import CORS
+import nltk
 
+nltk.download('punkt')
 app = Flask(__name__, static_folder='../FrontEnd/dist', static_url_path='/')
 CORS(app)
 # Load environment variables
