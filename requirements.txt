@@ -32,7 +32,7 @@ setuptools==75.1.0
 sympy==1.13.3
 threadpoolctl==3.5.0
 tokenizers==0.19.1
-torch==2.4.1+cpu
+torch==2.4.1
 tqdm==4.66.5
 transformers==4.44.2
 typing_extensions==4.12.2
