@@ -12,6 +12,7 @@ import nltk
 
 nltk.download('punkt')
 app = Flask(__name__, static_folder='../FrontEnd/dist', static_url_path='/')
+app.config['ENV'] = 'production'
 CORS(app)
 # Load environment variables
 load_dotenv()
@@ -95,5 +96,4 @@ def chat():
         return jsonify({"error": "An error occurred while processing your message"}), 500
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(debug = True,host="0.0.0.0", port= 8000)
