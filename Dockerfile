@@ -1,12 +1,13 @@
 FROM python:3.12-slim
 
-WORKDIR /BackEnd/main
+WORKDIR /BackEnd
 
 COPY requirements.txt .
 
 RUN pip install --upgrade pip 
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN mkdir -p /var/tmp/pip-tmp && \
+    TMPDIR=/var/tmp/pip-tmp pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
