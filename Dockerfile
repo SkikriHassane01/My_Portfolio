@@ -1,39 +1,46 @@
 # Backend stage (Python Flask)
 FROM python:3.12-slim AS backend
 
-WORKDIR /BackEnd
+WORKDIR /My_portfolio/BackEnd/
 
-COPY requirements.txt .
-
+# Copy requirements file and install dependencies
+COPY requirements.txt ./
 RUN pip install --upgrade pip 
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN mkdir -p /var/tmp/pip-tmp && \
-    TMPDIR=/var/tmp/pip-tmp pip install --no-cache-dir -r requirements.txt
-
-COPY . .
+# Copy the entire backend directory
+COPY ./BackEnd /My_portfolio/BackEnd
 
 # Frontend stage (React)
 FROM node:18-alpine AS frontend
 
-WORKDIR /FrontEnd
+WORKDIR /My_portfolio/FrontEnd
 
 COPY ./FrontEnd/package*.json ./
 RUN npm install
 
-COPY ./FrontEnd .
+COPY ./FrontEnd . 
 RUN npm run build
 
 # Final stage (Combine frontend and backend)
 FROM python:3.12-slim
 
-WORKDIR /BackEnd
+WORKDIR /My_portfolio/BackEnd
 
-# Copy Python requirements and install
-COPY --from=backend /BackEnd /BackEnd
+# Copy the backend directory, including the requirements file
+COPY --from=backend /My_portfolio/BackEnd /My_portfolio/BackEnd
 
-# Copy React build files
-COPY --from=frontend /FrontEnd/build /BackEnd/FrontEnd/dist
+# Create a virtual environment
+RUN python -m venv venv
+
+# Activate the virtual environment and install requirements
+RUN . venv/bin/activate && pip install --no-cache-dir -r /My_portfolio/BackEnd/requirements.txt
+
+# Copy React build files from the frontend stage
+COPY --from=frontend /My_portfolio/FrontEnd/dist /My_portfolio/FrontEnd/dist
 
 EXPOSE 8000
 
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "main:app"]
+# Adjust the command to run Gunicorn from the virtual environment
+CMD ["bash", "-c", "source venv/bin/activate && gunicorn -b 0.0.0.0:8000 BackEnd.main:app"]
+
