@@ -1,5 +1,7 @@
 # Portfolio Project
 
+![image](https://github.com/user-attachments/assets/93dd093c-430d-42b6-8a0d-e61730c537a4)
+
 # you can find the link of the portfolio [here](https://hassaneskikri.me)
 
 ### Note:
